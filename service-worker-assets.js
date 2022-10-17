@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-kptPchweMZikhV0RFzx4D552DWlDyPi\/6dWCPqczHE0=",
+      "hash": "sha256-XImBuvLMs46CTu2J3xUPDCF\/Zx+t8XIXo23IjZyTenQ=",
       "url": "index.html"
     },
     {
@@ -93,7 +93,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-Fut13ZYN3jPYy7ju8jnycavf\/JfkiRNyfCxnGI6gKdM=",
+      "hash": "sha256-OECe5lGSnFVI3TACcY27LZOjUUDkS22umZscJZE8HJQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -169,7 +169,7 @@
       "url": "_framework\/Newtonsoft.Json.dll"
     },
     {
-      "hash": "sha256-SyHRoRkbkwuW0KQtCVXCeJQKjfFEaRPCnw8uAywwpNQ=",
+      "hash": "sha256-5ho4ahYVUQ1OGZlFD3sdUOKar4KWmyVEBrz8NSnaFMw=",
       "url": "_framework\/StarlightAdmin.dll"
     },
     {
@@ -321,5 +321,5 @@
       "url": "_content\/Blazm.Bluetooth\/Blazm.Bluetooth.js"
     }
   ],
-  "version": "PPZCIPnO"
+  "version": "WhLr\/694"
 };
