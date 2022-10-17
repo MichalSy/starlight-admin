@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-Svaa2C6UkWrliubtH+hy81VSD0C+zHuce8hfAUM\/YDY=",
+      "hash": "sha256-nCgg91B3yRyQkzEgls91PQN6n3qAmxgeDVJARzHPwvg=",
       "url": "index.html"
     },
     {
@@ -321,5 +321,5 @@
       "url": "_content\/Blazm.Bluetooth\/Blazm.Bluetooth.js"
     }
   ],
-  "version": "OFY0wxev"
+  "version": "s2iu4aYV"
 };
