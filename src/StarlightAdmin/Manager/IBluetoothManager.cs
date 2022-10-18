@@ -7,4 +7,5 @@ public interface IBluetoothManager
     Task ConnectWithDeviceAsync();
     Task<int> GetBrightnessAsync();
     Task SetBrightnessAsync(int brightness);
+    Task SetColorAsync(string hexColorString);
 }

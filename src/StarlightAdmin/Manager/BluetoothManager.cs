@@ -1,4 +1,5 @@
-﻿using Blazm.Bluetooth;
+﻿using System.Text;
+using Blazm.Bluetooth;
 
 namespace StarlightAdmin.Manager;
 
@@ -6,6 +7,7 @@ public class BluetoothManager : IBluetoothManager
 {
     private static readonly string _serviceId = "70d07a6c-ba09-4c2f-995c-502eb3f1dd29";
     private static readonly string _characteristicBrightnessId = "e1293490-510d-48a0-8b0f-9530d2b1d169";
+    private static readonly string _characteristicColorId = "476faf19-b5f5-402c-abc5-313032ffde3b";
     private readonly IBluetoothNavigator _bluetoothNavigator;
 
     private Device? _bluetoothDevice;
@@ -44,6 +46,11 @@ public class BluetoothManager : IBluetoothManager
     public async Task SetBrightnessAsync(int brightness)
     {
         await _bluetoothDevice!.WriteValueAsync(_serviceId, _characteristicBrightnessId, BitConverter.GetBytes(brightness));
+    }
+
+    public async Task SetColorAsync(string hexColorString)
+    {
+        await _bluetoothDevice!.WriteValueAsync(_serviceId, _characteristicColorId, Encoding.Default.GetBytes(hexColorString));
     }
 
 }
