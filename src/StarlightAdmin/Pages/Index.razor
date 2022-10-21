@@ -2,38 +2,7 @@
 @using MudBlazor.Utilities;
 @using StarlightAdmin.Manager;
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Starlight</PageTitle>
 
-<h1>Brightness</h1>
-<MudSlider Value="@currentBrightness" Min="0" Max="100" Step="5" ValueLabel="true" ValueChanged="@((int v) => UpdateBrightness(v))" />
-@currentBrightness
+<StarlightAdminControl></StarlightAdminControl>
 
-<br />
-<MudColorPicker 
-    DisableAlpha="true" 
-    DisableInputs="true" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static"
-                Value="@currentColor" ValueChanged="@((MudColor newColor) => UpdateColor(newColor))" />
-
-@code {
-    private int currentBrightness = 100;
-    private MudColor currentColor = new MudColor(255, 0, 0, 255);
-
-    private async Task UpdateBrightness(int newValue)
-    {
-        currentBrightness = newValue;
-        await btManager.ConnectWithDeviceAsync();
-        await btManager.SetBrightnessAsync(currentBrightness);
-    }
-
-    private async Task UpdateColor(MudColor newColor)
-    {
-        currentColor = newColor;
-        await btManager.ConnectWithDeviceAsync();
-        await btManager.SetColorAsync(currentColor.Value.Substring(0, currentColor.Value.Length - 2));
-
-    }
-
-    [Inject]
-    IBluetoothManager btManager { get; set; } = default!;
-
-}

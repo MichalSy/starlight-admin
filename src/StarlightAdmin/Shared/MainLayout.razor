@@ -1,13 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <main>
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-<MudThemeProvider/>
-<MudDialogProvider/>
-<MudSnackbarProvider/>
+<MudLayout Class="absolute">
+    <MudAppBar Elevation="1" Dense="true">
+        <MudText Typo="Typo.h6" Class="ml-3">Starlight</MudText>
+    </MudAppBar>
+    <MudMainContent Class="full-height">
+        @Body
+    </MudMainContent>
+</MudLayout>
+

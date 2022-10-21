@@ -1,0 +1,58 @@
+﻿<div class="d-flex flex-column full-height">
+
+    @if (!IsConnected)
+    {
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="ConnectWithDevice">Verbinden</MudButton>
+    }
+    else
+    {
+        <div class="flex-auto ma-10">
+
+            @if (CurrentTabIndex == 0)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    var currentIndex = i;
+                    <MudButton Variant="Variant.Text" OnClick="(e) => UpdateAnimationModeIndex(currentIndex)">
+                        <MudCard>
+                            <MudCardContent>
+                                <MudText>Animation @(currentIndex + 1)</MudText>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudButton>
+                }
+            }
+            @if (CurrentTabIndex == 1)
+            {
+                <MudSlider Value="@currentBrightness" Min="0" Max="100" Step="5" ValueLabel="true" ValueChanged="@((int v) => UpdateBrightness(v))" />
+                @currentBrightness
+
+                <br />
+                <MudColorPicker DisableAlpha="true"
+                        DisableInputs="true" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static"
+                        Value="@currentColor" ValueChanged="@((MudColor newColor) => UpdateColor(newColor))" />
+            }
+
+        </div>
+        <div class="bottom-bar">
+
+            <MudTabs Outlined="true"
+                 Position="Position.Bottom"
+                 Rounded="false" Border="false"
+                 Centered="true" ApplyEffectsToContainer="false"
+                 @bind-ActivePanelIndex="CurrentTabIndex">
+
+                <MudTabPanel Text="Animation"></MudTabPanel>
+                <MudTabPanel Text="Farbe"></MudTabPanel>
+
+
+            </MudTabs>
+        </div>
+
+
+    }
+
+
+</div>
+
+
