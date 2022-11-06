@@ -1,4 +1,19 @@
 /* /Components/StarlightAdminControl.razor.rz.scp.css */
+.scrollable[b-1in7pim2fq]
+{
+    overflow: scroll;
+}
+/* /Components/TabColorBasicComponent.razor.rz.scp.css */
+div[b-qvwy3gwo79] {
+    
+}
+
+button[b-qvwy3gwo79] {
+    padding: 1rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    width: 5rem;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-mb4xkpvtcs] {
     position: relative;
