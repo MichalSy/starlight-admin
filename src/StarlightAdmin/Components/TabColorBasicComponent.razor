@@ -1,0 +1,6 @@
+﻿@foreach (var colorString in _colors)
+{
+    <button style="background-color: @colorString" @onclick="() => ChangeColor(colorString)">
+        <span>@colorString</span>
+    </button>
+}

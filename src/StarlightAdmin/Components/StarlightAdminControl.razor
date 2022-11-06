@@ -10,7 +10,7 @@
     }
     else
     {
-        <div class="flex-auto ma-10">
+        <div class="flex-auto pa-10 scrollable">
 
             @if (CurrentTabIndex == 0)
             {
@@ -28,6 +28,10 @@
             }
             @if (CurrentTabIndex == 1)
             {
+                <TabColorBasicComponent></TabColorBasicComponent>
+            }
+            @if (CurrentTabIndex == 2)
+            {
                 <MudSlider Value="@currentBrightness" Min="0" Max="100" Step="5" ValueLabel="true" ValueChanged="@((int v) => UpdateBrightness(v))" />
                 @currentBrightness
 
@@ -35,6 +39,8 @@
                 <MudColorPicker DisableAlpha="true"
                         DisableInputs="true" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static"
                         Value="@currentColor" ValueChanged="@((MudColor newColor) => UpdateColor(newColor))" />
+
+                <MudTextField Value="@currentColor" Label="Filled" Variant="Variant.Filled"></MudTextField>
             }
 
         </div>
@@ -47,7 +53,8 @@
                  @bind-ActivePanelIndex="CurrentTabIndex">
 
                 <MudTabPanel Text="Animation"></MudTabPanel>
-                <MudTabPanel Text="Farbe"></MudTabPanel>
+                <MudTabPanel Text="Farbe Basic"></MudTabPanel>
+                <MudTabPanel Text="Farbe Adv"></MudTabPanel>
 
 
             </MudTabs>
