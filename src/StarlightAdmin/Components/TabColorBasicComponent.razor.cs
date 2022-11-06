@@ -28,7 +28,8 @@ public partial class TabColorBasicComponent
 
     private async void ChangeColor(string? newColor = null)
     {
-        await btManager.SetColorAsync(newColor ?? "");
+        Console.WriteLine($"New Color: {newColor ?? "#"}");
+        await btManager.SetColorAsync(newColor ?? "#");
     }
 
     private IEnumerable<string> generateColors()
@@ -48,35 +49,35 @@ public partial class TabColorBasicComponent
         }
 
         // r down
-        for (int i = 255; i >= 0; i -= step)
+        for (int i = 255 - step; i >= 0; i -= step)
         {
             r = (byte)i;
             result.Add("#" + r.ToString("X2") + g.ToString("X2") + b.ToString("X2"));
         }
 
         // b up
-        for (int i = 0; i < 255; i += step)
+        for (int i = 0 + step; i < 255; i += step)
         {
             b = (byte)i;
             result.Add("#" + r.ToString("X2") + g.ToString("X2") + b.ToString("X2"));
         }
 
         // g down
-        for (int i = 255; i >= 0; i -= step)
+        for (int i = 255 - step; i >= 0; i -= step)
         {
             g = (byte)i;
             result.Add("#" + r.ToString("X2") + g.ToString("X2") + b.ToString("X2"));
         }
 
         // r up
-        for (int i = 0; i < 255; i += step)
+        for (int i = 0 + step; i < 255; i += step)
         {
             r = (byte)i;
             result.Add("#" + r.ToString("X2") + g.ToString("X2") + b.ToString("X2"));
         }
 
         // b down
-        for (int i = 255; i >= 0; i -= step)
+        for (int i = 255 - step; i >= 0; i -= step)
         {
             b = (byte)i;
             result.Add("#" + r.ToString("X2") + g.ToString("X2") + b.ToString("X2"));
