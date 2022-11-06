@@ -29,12 +29,14 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    padding-left: 35px !important;
 }
 
     #blazor-error-ui .dismiss {
         cursor: pointer;
         position: absolute;
-        right: 0.75rem;
+        left: 0.75rem !important;
+        right: initial !important;
         top: 0.5rem;
     }
 

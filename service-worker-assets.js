@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-\/Vs08QvFaao8t8x\/jMcHpVRpxo+A5hUhf+KSggyvIOk=",
+      "hash": "sha256-ItY2Ig4ozjKSMB4Ci7LW1gaOIj1zFtb\/gg\/en+LTGP0=",
       "url": "css\/app.css"
     },
     {
@@ -321,7 +321,7 @@
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-12ClJ3HSa2olCQe+w0uz+YjutdVFQoL8eTscr7N6s\/0=",
+      "hash": "sha256-0Jf4IEiaaMSARVEcU2l2NmCj7q6qJkEO9TMvOZVbgc8=",
       "url": "StarlightAdmin.styles.css"
     },
     {
@@ -337,5 +337,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "Y3321G0s"
+  "version": "Qh7V\/w2P"
 };
