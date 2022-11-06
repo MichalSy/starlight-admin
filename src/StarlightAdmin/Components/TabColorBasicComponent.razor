@@ -1,4 +1,8 @@
-﻿@foreach (var colorString in _colors)
+﻿<button style="background-color: white; border: solid 1px black" @onclick="() => ChangeColor(string.Empty)">
+    <span>Random</span>
+</button>
+
+@foreach (var colorString in _colors)
 {
     <button style="background-color: @colorString" @onclick="() => ChangeColor(colorString)">
         <span>@colorString</span>

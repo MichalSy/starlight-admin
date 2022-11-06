@@ -26,9 +26,9 @@ public partial class TabColorBasicComponent
         });
     }
 
-    private async void ChangeColor(string newColor)
+    private async void ChangeColor(string? newColor = null)
     {
-        await btManager.SetColorAsync(newColor);
+        await btManager.SetColorAsync(newColor ?? "#");
     }
 
     private IEnumerable<string> generateColors()
