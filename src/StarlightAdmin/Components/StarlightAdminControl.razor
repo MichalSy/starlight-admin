@@ -1,8 +1,12 @@
 ﻿<div class="d-flex flex-column full-height">
 
-    @if (!IsConnected)
+    @if (!IsConnected && !IsConnectingInProgress)
     {
         <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="ConnectWithDevice">Verbinden</MudButton>
+    }
+    else if (IsConnectingInProgress)
+    {
+        <span>Connecting...</span>
     }
     else
     {

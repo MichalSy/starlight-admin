@@ -11,19 +11,35 @@ public partial class StarlightAdminControl
     private int currentAnimationModeIndex = 0;
 
     public bool IsConnected => btManager.IsConnected;
+    public bool IsConnectingInProgress { get; set; }
 
     public int CurrentTabIndex { get; set; } = 0;
 
+    
+
     private async Task ConnectWithDevice()
     {
+        IsConnectingInProgress = true;
         while (!btManager.IsConnected)
         {
             await btManager.ConnectWithDeviceAsync();
+            await Task.Delay(10);
         }
 
-        currentBrightness = await btManager.GetBrightnessAsync();
-        currentColor = new(await btManager.GetColorAsync());
-        StateHasChanged();
+        var successed = false;
+        while(!successed)
+        {
+            try
+            {
+                currentBrightness = await btManager.GetBrightnessAsync();
+                currentColor = new(await btManager.GetColorAsync());
+                StateHasChanged();
+                successed = true;
+                IsConnectingInProgress = false;
+            }
+            catch { }
+            await Task.Delay(10);
+        }   
     }
 
     private async Task UpdateBrightness(int newValue)
